@@ -1,7 +1,7 @@
 $TESTING = true
 $:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
 
-$CODECLIMATE_REPO_TOKEN = '1d6997f6b4d85edac170765d42aa41f0378c9722d87665960b35dcbbd10bd2de'
+$CODECLIMATE_REPO_TOKEN = 'c430a114ad74e5230870715218d166bf0394c5aec989d4152f7576dd6f93fbd8'
 
 require 'rspec/its'
 require 'napoleon'
