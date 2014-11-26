@@ -1,8 +1,8 @@
-# AlterMvc
+# Napoleon
 
-[![Code Climate](https://codeclimate.com/github/alterego-labs/alter_mvc/badges/gpa.svg)](https://codeclimate.com/github/alterego-labs/alter_mvc)
-[![Test Coverage](https://codeclimate.com/github/alterego-labs/alter_mvc/badges/coverage.svg)](https://codeclimate.com/github/alterego-labs/alter_mvc)
-[![Build Status](https://travis-ci.org/alterego-labs/alter_mvc.svg?branch=release_1_0_0)](https://travis-ci.org/alterego-labs/alter_mvc)
+[![Code Climate](https://codeclimate.com/github/alterego-labs/napoleon/badges/gpa.svg)](https://codeclimate.com/github/alterego-labs/napoleon)
+[![Test Coverage](https://codeclimate.com/github/alterego-labs/napoleon/badges/coverage.svg)](https://codeclimate.com/github/alterego-labs/napoleon)
+[![Build Status](https://travis-ci.org/alterego-labs/napoleon.svg?branch=release_1_0_0)](https://travis-ci.org/alterego-labs/napoleon)
 
 MVC concept was described in 1979 by Trygve Reenskaugom and despite the fact that the first reviews were not very positive, it finds its use to this day. Concept improved and complemented with new followers, depending on the capabilities of the platform and language, but the essence remains the same - to share data submission and processing of user actions on the individual components. Features of this separation become reuse and loose coupling components. But the more we dive into the Rails more feel imperfection MVC.
 This gem provides for you tools for extending Rails's MVC by next components:
@@ -17,13 +17,13 @@ This gem provides for you tools for extending Rails's MVC by next components:
 
 At the next picture presented class diagram of my concept:
 
-![Class diagram of alter_mvc concept](https://github.com/alterego-labs/alter_mvc/raw/master/lib/resources/alter_mvc.png "Class diagram of alter_mvc concept")
+![Class diagram of napoleon concept](https://github.com/alterego-labs/napoleon/raw/master/lib/resources/napoleon.png "Class diagram of napoleon concept")
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'alter_mvc', '0.1.0'
+    gem 'napoleon', '0.1.0'
 
 And then execute:
 
@@ -31,7 +31,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install alter_mvc
+    $ gem install napoleon
 
 ## New in 1.0.0!
 
@@ -66,13 +66,13 @@ changes below:
 A model's wrapper for run some specific queries on it. For adding query object run following command:
 
 ```
-$ rails generate alter_mvc:query User
+$ rails generate napoleon:query User
 ```
 
-And include AlterMvc::Concerns::Querable to appropriate model:
+And include Napoleon::Concerns::Querable to appropriate model:
 
 ```
-include AlterMvc::Concerns::Querable
+include Napoleon::Concerns::Querable
 ```
 
 ### ModelPresenter
@@ -112,13 +112,13 @@ _\_full\_show.html.slim_.
 For adding presenter object run:
 
 ```
-$ rails generate alter_mvc:presenter Post
+$ rails generate napoleon:presenter Post
 ```
 
-And include AlterMvc::Concerns::Presentable to appropriate model:
+And include Napoleon::Concerns::Presentable to appropriate model:
 
 ```
-include AlterMvc::Concerns::Presentable
+include Napoleon::Concerns::Presentable
 ```
 
 ### ModelServiceObject
@@ -127,13 +127,13 @@ Contains model specific business rules. Run following command for adding
 service object:
 
 ```
-$ rails generate alter_mvc:service_object Post
+$ rails generate napoleon:service_object Post
 ```
 
-And include AlterMvc::Concerns::ServiceObjectable to appropriate model:
+And include Napoleon::Concerns::ServiceObjectable to appropriate model:
 
 ```
-include AlterMvc::Concerns::ServiceObjectable
+include Napoleon::Concerns::ServiceObjectable
 ```
 
 ### UseCase
@@ -145,7 +145,7 @@ scenario in USE-CASE diagram.
 For adding new empty use case class run:
 
 ```
-$ rails generate alter_mvc:use_case AddPost
+$ rails generate napoleon:use_case AddPost
 ```
 
 ### Responder
@@ -185,7 +185,7 @@ Using Responder give to us some advantages:
 For adding new responder run:
 
 ```
-$ rails generate alter_mvc:responder Book
+$ rails generate napoleon:responder Book
 ```
 
 and add this line to appropriate controller:
@@ -203,7 +203,7 @@ Parsing income GET and POST parameters for use cases and provides objecting appr
 For adding new ParameterSanitizer run:
 
 ```
-$ rails generate alter_mvc:parameter_sanitizer PlacingBet
+$ rails generate napoleon:parameter_sanitizer PlacingBet
 ```
 
 ### Validator
@@ -213,7 +213,7 @@ Moving validation in additional layer helps us to hard-line divide between persi
 For adding new Validator run:
 
 ```
-$ rails generate alter_mvc:validator DraftPost
+$ rails generate napoleon:validator DraftPost
 ```
 
 ## CHANGES IN 0.1.0
